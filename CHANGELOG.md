@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 - 2026-09-08
+
+- Load the preferred active DockFrame environment automatically from the ExtBay sandbox context.
+- Keep manual Endpoint ID entry as a fallback for multi-environment or restricted users.
+
 ## 1.0.1 - 2026-09-08
 
 - Fix repository and GitHub installation links.

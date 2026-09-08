@@ -1,4 +1,5 @@
 let nonce;
+let context = {};
 const pending = new Map();
 let resolveReady;
 const readyPromise = new Promise((resolve) => {
@@ -13,7 +14,9 @@ window.addEventListener('message', (event) => {
     typeof event.data.nonce === 'string'
   ) {
     nonce = event.data.nonce;
-    resolveReady();
+    const endpointId = event.data.context?.endpointId;
+    context = Number.isSafeInteger(endpointId) && endpointId > 0 ? { endpointId } : {};
+    resolveReady(context);
     return;
   }
   if (event.data.type !== 'extbay.rpc.result' || event.data.nonce !== nonce)
@@ -53,6 +56,7 @@ function call(method, params = {}) {
 
 export const extbay = {
   ready: () => readyPromise,
+  context: () => context,
   containers: {
     list: (endpointId) => call('containers.list', { endpointId }),
     inspect: (endpointId, id) =>

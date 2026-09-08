@@ -23,7 +23,13 @@ const state = {
 };
 
 renderShell();
-extbay.ready().then(() => setStatus('Ready. Enter a Portainer Endpoint ID.'));
+extbay.ready().then((context) => {
+  if (context.endpointId) {
+    document.querySelector('#endpoint-id').value = String(context.endpointId);
+    return loadEndpoint(context.endpointId);
+  }
+  setStatus('Ready. Enter a Portainer Endpoint ID.');
+}).catch((error) => setStatus(errorMessage(error), true));
 
 function renderShell() {
   app.replaceChildren(

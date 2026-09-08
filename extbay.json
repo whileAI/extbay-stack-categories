@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "whileai.dockframe-stack-categories",
   "name": "DockFrame Stack Categories",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "whileAI",
   "description": "Categorize Docker stacks and inspect AI model or website containers from a sandboxed ExtBay page.",
   "homepage": "https://github.com/whileAI/extbay-stack-categories",

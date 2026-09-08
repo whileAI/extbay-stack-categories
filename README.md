@@ -41,8 +41,8 @@ npm run package
 The release files are created under `release/`:
 
 ```text
-dockframe-stack-categories-1.0.1.extbay
-dockframe-stack-categories-1.0.1.extbay.sha256
+dockframe-stack-categories-1.0.2.extbay
+dockframe-stack-categories-1.0.2.extbay.sha256
 ```
 
 The `.extbay` archive has `extbay.json` at its ZIP root as required by ExtBay.
@@ -50,12 +50,12 @@ The `.extbay` archive has `extbay.json` at its ZIP root as required by ExtBay.
 ## Install locally
 
 ```sh
-extbay install ./release/dockframe-stack-categories-1.0.1.extbay
+extbay install ./release/dockframe-stack-categories-1.0.2.extbay
 extbay list
 extbay logs whileai.dockframe-stack-categories
 ```
 
-Open **Stack Categories** in the ExtBay sidebar, enter the Endpoint ID shown by Portainer, and select **Load stacks**.
+Open **Stack Categories** in the ExtBay sidebar. The preferred active local environment loads automatically when DockFrame exposes it; otherwise enter the Endpoint ID shown by Portainer and select **Load stacks**.
 
 ## Publish a release
 
@@ -64,7 +64,7 @@ Open **Stack Categories** in the ExtBay sidebar, enter the Endpoint ID shown by 
 3. Create and push the matching version tag:
 
 ```sh
-git tag v1.0.1
+git tag v1.0.2
 git push origin main --tags
 ```
 
