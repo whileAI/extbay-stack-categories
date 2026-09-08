@@ -1,0 +1,16 @@
+{
+  "name": "dockframe-stack-categories",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ExtBay extension for DockFrame stack categories and AI/website insights.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "package": "npm run build && node scripts/package.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

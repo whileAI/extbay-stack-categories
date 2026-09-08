@@ -1,0 +1,6 @@
+node_modules/
+package-root/
+release/
+*.extbay
+*.extbay.sha256
+.DS_Store

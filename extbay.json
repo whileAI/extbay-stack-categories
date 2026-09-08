@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "whileai.dockframe-stack-categories",
+  "name": "DockFrame Stack Categories",
+  "version": "1.0.0",
+  "author": "whileAI",
+  "description": "Categorize Docker stacks and inspect AI model or website containers from a sandboxed ExtBay page.",
+  "homepage": "https://github.com/whileAI/dockframe-stack-categories",
+  "compatibility": {
+    "portainer": ">=2.20.0 <3.0.0",
+    "extbay": ">=0.1.0"
+  },
+  "runtime": {
+    "reload": "hot"
+  },
+  "permissions": [
+    "containers.read",
+    "containers.control",
+    "stacks.read",
+    "extension.storage"
+  ],
+  "ui": {
+    "entry": "dist/index.html",
+    "sidebar": {
+      "title": "Stack Categories",
+      "icon": "layers"
+    }
+  }
+}
