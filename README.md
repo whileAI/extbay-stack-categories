@@ -41,8 +41,8 @@ npm run package
 The release files are created under `release/`:
 
 ```text
-dockframe-stack-categories-1.0.0.extbay
-dockframe-stack-categories-1.0.0.extbay.sha256
+dockframe-stack-categories-1.0.1.extbay
+dockframe-stack-categories-1.0.1.extbay.sha256
 ```
 
 The `.extbay` archive has `extbay.json` at its ZIP root as required by ExtBay.
@@ -50,7 +50,7 @@ The `.extbay` archive has `extbay.json` at its ZIP root as required by ExtBay.
 ## Install locally
 
 ```sh
-extbay install ./release/dockframe-stack-categories-1.0.0.extbay
+extbay install ./release/dockframe-stack-categories-1.0.1.extbay
 extbay list
 extbay logs whileai.dockframe-stack-categories
 ```
@@ -59,12 +59,12 @@ Open **Stack Categories** in the ExtBay sidebar, enter the Endpoint ID shown by 
 
 ## Publish a release
 
-1. Create the repository `whileAI/dockframe-stack-categories` without GitHub-generated README, `.gitignore`, or license files.
+1. Use the repository `whileAI/extbay-stack-categories`.
 2. Push this project.
 3. Create and push the matching version tag:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main --tags
 ```
 
@@ -73,7 +73,7 @@ The included GitHub Action builds the package and attaches exactly one `.extbay`
 Install the latest GitHub release with:
 
 ```sh
-extbay install github:whileAI/dockframe-stack-categories
+extbay install github:whileAI/extbay-stack-categories
 ```
 
 ## Updating
